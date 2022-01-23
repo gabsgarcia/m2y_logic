@@ -14,8 +14,15 @@
 
 # iterate over the string
 str = "<<.<<..>><>><.>.>.<<.>.<.>>>><>><>>"
-str.each do
-# check what are "." and keep this info
-# check what are "<>"" and keep this info somewhere else
-# prints the kept "." and "<>"
-#prints how many
+# take out "." and keep this info
+sand_out = str.gsub(".", "")
+# take out "<>"" and keep this info somewhere else
+diamond_out = sand_out.gsub("<>", "")
+# loop?
+if diamond_out.include?("<>")
+  diamond_left = diamond_out.gsub("<>", "")
+end
+# prints the kept "<>"
+print diamonds
+
+#prints how many diamonds
